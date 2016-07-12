@@ -30,6 +30,4 @@ McGill University
 
 In collaboration with Infusion Systems
 
-
-
 July 2016
