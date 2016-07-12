@@ -5,10 +5,18 @@
     "dependencies": {
         "i2c-lcd"  : "1.0.*"
     },
-    "keywords": [ "node-red" ],
+    "keywords": [ "node-red", "i2c", "lcd", "raspberry" ],
     "node-red"     : {
         "nodes": {
             "i2clcd": "i2clcd.js"
         }
-    }
+    },
+    "repository": {
+        "type" : "git",
+        "url"  : "https://github.com/johnty/node-red-contrib-i2clcd"
+    },
+    "license"      : "ISC",
+    "readme"       : "see README.md in root folder"
+
+    
 }
