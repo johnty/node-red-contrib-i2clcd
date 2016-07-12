@@ -1,24 +1,12 @@
-<script type="text/javascript">
-    RED.nodes.registerType('i2clcd',{
-        category: 'Raspberry_Pi',
-        color: '2C75FF',
-        defaults: {
-            name: {value:""},
-            address: {value:"0x3f",required:true}
-        },
-        inputs:1,
-        outputs:1,
-        icon: "file.png",
-        label: function() {
-            return this.name||"i2clcd";
-        }
-    });
-</script>
 
 <script type="text/x-red" data-template-name="i2clcd">
     <div class="form-row">
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-addr"><i class="icon-asterisk"></i> i2c address</label>
+        <input type="text" id="node-input-addr" placeholder="Address">
     </div>
 </script>
 
@@ -27,4 +15,22 @@
     
     <p>inject message with <b>msg.topic</b> as <i>line1</i> or <i>line2</i> and prints <b>msg.payload</b> to each line. </p>
     <p>inject message with <b>msg.topic</b> set to <i>init</i> to reinitialize screen</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('i2clcd',{
+        category: 'output',
+        color: "#2C75FF",
+        defaults: {
+            name: {value:"1602 LCD"},
+            addr: {value:"0x3f",required:true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "arrow-out.png",
+        align: 'right',
+        label: function() {
+            return this.name||"i2clcd";
+        }
+    });
 </script>

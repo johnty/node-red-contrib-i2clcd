@@ -1,6 +1,5 @@
 module.exports = function(RED) {
 
-   LCD_ADDR = 0x3f;
    LCD = require('./node_modules/i2c-lcd/lib/lcd');
    var lcd;
    
@@ -25,9 +24,9 @@ module.exports = function(RED) {
       console.log("creating LCD node");
       RED.nodes.createNode(this,config);
       var node = this;
-      this.LCD_ADDR = config.address;
-      console.log("LCD node init @ i2c addr:" + LCD_ADDR);
-      lcd = new LCD("/dev/i2c-1",LCD_ADDR);
+      this.LCD_ADDR = parseInt(config.addr);
+      console.log("LCD node init @ i2c addr:" + this.LCD_ADDR);
+      lcd = new LCD("/dev/i2c-1",this.LCD_ADDR);
       initLCD();
           
       this.on('input', function(msg) {
