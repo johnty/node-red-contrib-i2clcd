@@ -1,0 +1,14 @@
+{
+    "name"         : "node-red-contrib-i2clcd",
+    "version"      : "0.0.1",
+    "description"  : "a node-red node that outputs to a 1602 i2c lcd",
+    "dependencies": {
+        "i2c-lcd"  : "1.0.*"
+    },
+    "keywords": [ "node-red" ],
+    "node-red"     : {
+        "nodes": {
+            "i2clcd": "i2clcd.js"
+        }
+    }
+}
