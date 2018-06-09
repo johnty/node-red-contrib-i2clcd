@@ -45,6 +45,14 @@ module.exports = function(RED) {
             lcd.setCursor(0,1).then(function() {
                lcd.print(msg.payload); });
          }
+         if (msg.topic.localeCompare("line3") == 0) {
+            lcd.setCursor(0,2).then(function() {
+               lcd.print(msg.payload); });
+         }
+         if (msg.topic.localeCompare("line4") == 0) {
+            lcd.setCursor(0,3).then(function() {
+               lcd.print(msg.payload); });
+         }
          node.send(msg); //pass message through
       });
    }
