@@ -1,4 +1,4 @@
-##Intro and Usage##
+## Intro and Usage ##
 
 ![img here](img01.png)
 
@@ -9,18 +9,30 @@ Use topic *line1* and *line2* to send message payload to each line, and topic *i
 Tested on Raspbian Jessie and should work with all RPi models.
 
 
-##Requirements##
+## Requirements ##
 
 - Raspberry Pi of your choice
 - A LCD 1602 panel that has an i2c driver
 - i2c-lcd (available in npm repo, but may require a manual compile since the i2c library v0.1.x do not compile on current node versions)
 
-##Notes##
+## Install Instructions: ##
+
+`cd ~/.node-red/node_modules`
+
+`git clone https://github.com/johnty/node-red-contrib-i2clcd`
+
+`cd ~/.node-red/node_modules/node-red-contrib-i2clcd`
+
+`npm i`
+
+## Notes ##
 
 - Designed to work with [Infusion System's PiShield](https://infusionsystems.com/pishield/) where everything is converted to 5V, but should also work directly by connecting directly to the i2c pins
 - Should work fine on a larger display (e.g. 2004), but addtional lines are not supported by default
 - Super fast updates can cause the display to glitch out, so consider using the Delay node in speed limiting mode if you have input that changes very quickly
 - Feel free to suggest new features and corrections!
+
+
 
 ---
 Johnty Wang (johnty.wang@mail.mcgill.ca)
