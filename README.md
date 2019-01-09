@@ -1,3 +1,7 @@
+## Node Version Notice: Doesn't not work with v10!! ##
+
+- The i2c library used by dependency i2c-lcd does not compile any more with Node V10.x, so either use V8.x or below, or else feel free to help move this over to a more updated i2c/i2c-lcd library!
+
 ## Intro and Usage ##
 
 ![img here](img01.png)
