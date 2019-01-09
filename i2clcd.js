@@ -34,11 +34,18 @@ module.exports = function(RED) {
          if (msg.topic.localeCompare("init") == 0) {
              lcd.init();
          }
-
+         if (msg.topic.localeCompare("clear") == 0) {
+             lcd.clear();
+         }
+          if (msg.topic.localeCompare("on") == 0) {
+             lcd.on();
+         }
+         if (msg.topic.localeCompare("off") == 0) {
+             lcd.off();
+         }
          if (msg.topic.localeCompare("line1") == 0) {
          lcd.setCursor(0,0).then(function() {
-            lcd.print(msg.payload);
-         });
+            lcd.print(msg.payload); });
          }
 
          if (msg.topic.localeCompare("line2") == 0) {
